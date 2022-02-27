@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plants/constants.dart';
+import 'package:plants/screens/home/components/featured_plants.dart';
 import 'package:plants/screens/home/components/header_with_searchbox.dart';
+import 'package:plants/screens/home/components/recommended_plants.dart';
 import 'package:plants/screens/home/components/title_with_more_btn.dart';
 
 class Body extends StatelessWidget {
@@ -17,10 +19,17 @@ class Body extends StatelessWidget {
             title: "Recommended",
             press: () {},
           ),
-          Container()
+          RecommendedPlants(),
+          TitleWithMoreBtn(
+            title: "Featured plants",
+            press: () {},
+          ),
+          FeaturedPlants(),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
         ],
       ),
     );
   }
 }
-
